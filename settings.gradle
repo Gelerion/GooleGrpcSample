@@ -1,0 +1,6 @@
+rootProject.name = 'SimpleGrpc'
+
+include 'grpcServer'
+include 'grpcClient'
+include 'chatServer'
+

@@ -1,0 +1,79 @@
+// 1. syntax, package, option
+// 2. message request, response, types, tags
+// 3. enum, map, repeated
+// 4. service, unary requst/response
+
+syntax = "proto3";
+
+package com.denis.grps;
+option java_multiple_files = true;
+
+enum Sentiment {
+    HAPPY = 0;
+    SLEEPY = 1;
+    ANGRY = 2;
+}
+
+message HelloRequest {
+    string firstName = 1;
+    string lastname = 2;
+    int64 age = 3;
+    Sentiment sentiment = 4;
+    repeated string hobbies = 5;
+    map<string, string> bagOfTricks = 6;
+}
+
+message HelloResponse {
+    string greeting = 1;
+}
+
+service GreetingService {
+    rpc greeting(HelloRequest) returns (HelloResponse);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
